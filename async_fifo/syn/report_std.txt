@@ -1,0 +1,137 @@
+
+14. Printing statistics.
+
+=== $paramod\sync_2ff\ASIZE=s32'00000000000000000000000000000100 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        5 wires
+       17 wire bits
+        5 public wires
+       17 public wire bits
+        4 ports
+       12 port bits
+       10 cells
+       10   $_DFF_PN0_
+
+=== $paramod$71b9f8699842e5448aa0f4130186f3c44fe03433\fifomem ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      220 wires
+      352 wire bits
+       22 public wires
+      154 public wire bits
+        6 ports
+       26 port bits
+      334 cells
+        7   $_ANDNOT_
+       48   $_AND_
+      128   $_DFFE_PP_
+       90   $_MUX_
+       32   $_NAND_
+        7   $_NOR_
+       16   $_ORNOT_
+        6   $_OR_
+
+=== async_fifo ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       17 wires
+       53 wire bits
+       16 public wires
+       52 public wire bits
+       10 ports
+       24 port bits
+        1 cells
+        1   $_ANDNOT_
+        5 submodules
+        1   $paramod$71b9f8699842e5448aa0f4130186f3c44fe03433\fifomem
+        1   $paramod\rptr_empty\ASIZE=s32'00000000000000000000000000000100
+        2   $paramod\sync_2ff\ASIZE=s32'00000000000000000000000000000100
+        1   $paramod\wptr_full\ASIZE=s32'00000000000000000000000000000100
+
+=== $paramod\rptr_empty\ASIZE=s32'00000000000000000000000000000100 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       27 wires
+       50 wire bits
+       11 public wires
+       34 public wire bits
+        7 ports
+       18 port bits
+       36 cells
+        1   $_ANDNOT_
+        7   $_AND_
+        9   $_DFF_PN0_
+        1   $_DFF_PN1_
+        1   $_NAND_
+        1   $_NOR_
+        2   $_NOT_
+       12   $_XNOR_
+        2   $_XOR_
+
+=== $paramod\wptr_full\ASIZE=s32'00000000000000000000000000000100 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       29 wires
+       52 wire bits
+       11 public wires
+       34 public wire bits
+        7 ports
+       18 port bits
+       38 cells
+        1   $_ANDNOT_
+        8   $_AND_
+       10   $_DFF_PN0_
+        1   $_NAND_
+        1   $_NOR_
+        2   $_NOT_
+        2   $_ORNOT_
+        9   $_XNOR_
+        4   $_XOR_
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+      429 async_fifo
+      334 $paramod$71b9f8699842e5448aa0f4130186f3c44fe03433\fifomem
+       36 $paramod\rptr_empty\ASIZE=s32'00000000000000000000000000000100
+       10 $paramod\sync_2ff\ASIZE=s32'00000000000000000000000000000100
+       38 $paramod\wptr_full\ASIZE=s32'00000000000000000000000000000100
+
+        +----------Count including submodules.
+        | 
+      303 wires
+      541 wire bits
+       70 public wires
+      308 public wire bits
+       38 ports
+      110 port bits
+        - memories
+        - memory bits
+        - processes
+      429 cells
+       10   $_ANDNOT_
+       63   $_AND_
+      128   $_DFFE_PP_
+       39   $_DFF_PN0_
+        1   $_DFF_PN1_
+       90   $_MUX_
+       34   $_NAND_
+        9   $_NOR_
+        4   $_NOT_
+       18   $_ORNOT_
+        6   $_OR_
+       21   $_XNOR_
+        6   $_XOR_
+        5 submodules
+        1   $paramod$71b9f8699842e5448aa0f4130186f3c44fe03433\fifomem
+        1   $paramod\rptr_empty\ASIZE=s32'00000000000000000000000000000100
+        2   $paramod\sync_2ff\ASIZE=s32'00000000000000000000000000000100
+        1   $paramod\wptr_full\ASIZE=s32'00000000000000000000000000000100
+

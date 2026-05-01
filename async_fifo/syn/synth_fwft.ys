@@ -1,0 +1,11 @@
+read_verilog ../../commonlib/fifomem.v
+read_verilog ../../commonlib/sync_2ff.v
+read_verilog ../rtl/async_fifo.v
+read_verilog ../rtl/fwft_async_fifo.v
+
+hierarchy -check -top fwft_async_fifo
+proc; opt; fsm; opt; memory; opt
+techmap; opt
+synth
+
+tee -o report_fwft.txt stat

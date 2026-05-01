@@ -1,0 +1,129 @@
+
+6. Printing statistics.
+
+=== $paramod$71b9f8699842e5448aa0f4130186f3c44fe03433\fifomem ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        7 wires
+       32 wire bits
+        6 public wires
+       26 public wire bits
+        6 ports
+       26 port bits
+        2 cells
+        2   RAM32M
+
+=== $paramod\rptr_empty\ASIZE=s32'00000000000000000000000000000100 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       28 wires
+       78 wire bits
+       11 public wires
+       34 public wire bits
+        7 ports
+       18 port bits
+       32 cells
+        2   CARRY4
+        9   FDCE
+        1   FDPE
+       10   INV
+        4   LUT2
+        2   LUT3
+        3   LUT6
+        1   MUXF7
+
+=== $paramod\sync_2ff\ASIZE=s32'00000000000000000000000000000100 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       15 wires
+       27 wire bits
+        5 public wires
+       17 public wire bits
+        4 ports
+       12 port bits
+       20 cells
+       10   FDCE
+       10   INV
+
+=== $paramod\wptr_full\ASIZE=s32'00000000000000000000000000000100 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       26 wires
+       76 wire bits
+       11 public wires
+       34 public wire bits
+        7 ports
+       18 port bits
+       34 cells
+        2   CARRY4
+       10   FDCE
+       10   INV
+        5   LUT2
+        6   LUT3
+        1   LUT6
+
+=== async_fifo ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       28 wires
+       79 wire bits
+       16 public wires
+       52 public wire bits
+       10 ports
+       24 port bits
+       27 cells
+        2   BUFG
+       14   IBUF
+        1   LUT2
+       10   OBUF
+        5 submodules
+        1   $paramod$71b9f8699842e5448aa0f4130186f3c44fe03433\fifomem
+        1   $paramod\rptr_empty\ASIZE=s32'00000000000000000000000000000100
+        2   $paramod\sync_2ff\ASIZE=s32'00000000000000000000000000000100
+        1   $paramod\wptr_full\ASIZE=s32'00000000000000000000000000000100
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+      135 async_fifo
+        2 $paramod$71b9f8699842e5448aa0f4130186f3c44fe03433\fifomem
+       32 $paramod\rptr_empty\ASIZE=s32'00000000000000000000000000000100
+       20 $paramod\sync_2ff\ASIZE=s32'00000000000000000000000000000100
+       34 $paramod\wptr_full\ASIZE=s32'00000000000000000000000000000100
+
+        +----------Count including submodules.
+        | 
+      119 wires
+      319 wire bits
+       54 public wires
+      180 public wire bits
+       38 ports
+      110 port bits
+        - memories
+        - memory bits
+        - processes
+      135 cells
+        2   BUFG
+        4   CARRY4
+       39   FDCE
+        1   FDPE
+       14   IBUF
+       40   INV
+       10   LUT2
+        8   LUT3
+        4   LUT6
+        1   MUXF7
+       10   OBUF
+        2   RAM32M
+        5 submodules
+        1   $paramod$71b9f8699842e5448aa0f4130186f3c44fe03433\fifomem
+        1   $paramod\rptr_empty\ASIZE=s32'00000000000000000000000000000100
+        2   $paramod\sync_2ff\ASIZE=s32'00000000000000000000000000000100
+        1   $paramod\wptr_full\ASIZE=s32'00000000000000000000000000000100
+

@@ -1,0 +1,13 @@
+# Compiled simulation files
+*.vvp
+*.out
+sim.out
+
+# Waveform files
+*.vcd
+
+# Synthesis reports (optional, uncomment if you don't want to track them)
+# syn/*.txt
+
+# OS generated files
+.DS_Store

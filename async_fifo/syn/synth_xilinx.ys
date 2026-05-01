@@ -1,0 +1,10 @@
+read_verilog ../../commonlib/fifomem.v
+read_verilog ../../commonlib/sync_2ff.v
+read_verilog ../rtl/async_fifo.v
+
+hierarchy -check -top async_fifo
+
+# Targeting Xilinx 7-Series architecture to see how memory is inferred
+synth_xilinx -top async_fifo
+
+tee -o report_xilinx.txt stat
