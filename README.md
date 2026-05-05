@@ -22,9 +22,17 @@ A collection of reliable, cross-clock domain synchronization FIFOs.
 ### 2. Common Library (`commonlib/`)
 Reusable, foundational infrastructure blocks for IP development.
 *   **`fifomem.v`**: A parameterized, behavioral Dual-Port SRAM model with asynchronous read support.
+*   **`rom.v`**: A parameterized, single-port ROM with asynchronous read and `$readmemh` initialization.
 *   **`sync_2ff.v`**: A parameterized 2-stage Flip-Flop synchronizer for safely passing signals across asynchronous clock domains.
 
-### 3. Block Floating-Point (BFP) Unit (`ip_bfp/`)
+### 3. Complex Mixer (`ip_complex_mixer/`)
+A complex frequency mixer with NCO-optimized quarter-wave shared ROM.
+*   **Architecture**: 3-stage pipeline — phase accumulator → NCO LUT → complex multiply.
+*   **NCO ROM optimization**: Quarter-wave table packs `{sin[N/4-1-i], sin[i]}` per entry so both cos(θ) and sin(θ) are derived from a single ROM read, halving memory area vs. two separate tables.
+*   **Parameters**: `DATA_W=16` (I/Q), `AMP_W=12` (NCO amplitude), `PHASE_W=16` (frequency resolution = fs/65536), runtime `freq_word` port.
+*   **Verification**: Python golden model generates bit-true test vectors; 200/200 cases pass.
+
+### 4. Block Floating-Point (BFP) Unit (`ip_bfp/`)
 *   Contains RTL templates and extensive Python-based test pattern generators (`pattern/bfp_sim.py`) for exploring Block Floating-Point quantization algorithms and hardware trade-offs.
 
 ## Simulation & Tools
